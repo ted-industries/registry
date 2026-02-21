@@ -3,7 +3,7 @@
 this is a minimal vercel proxy for the `ted` code editor extension registry.
 
 ## how it works
-it proxies requests from `registry.ted.tomlin7.com/v1/extensions.json` to the actual source JSON at `extensions.head.domain7.com`.
+it proxies requests from `registry.ted.tomlin7.com` (available via `/`, `/v1`, or `/v1/extensions.json`) to the actual source JSON at `extensions.ted.tomlin7.com/v1/extensions.json`.
 
 ## configuration
 - **type**: rewrite (masked proxy)

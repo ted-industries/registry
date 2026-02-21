@@ -3,13 +3,21 @@
   "name": "ted-registry-proxy",
   "rewrites": [
     {
+      "source": "/",
+      "destination": "https://extensions.ted.tomlin7.com/v1/extensions.json"
+    },
+    {
+      "source": "/v1",
+      "destination": "https://extensions.ted.tomlin7.com/v1/extensions.json"
+    },
+    {
       "source": "/v1/extensions.json",
-      "destination": "https://extensions.head.domain7.com/v1/public/extensions.json"
+      "destination": "https://extensions.ted.tomlin7.com/v1/extensions.json"
     }
   ],
   "headers": [
     {
-      "source": "/v1/extensions.json",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
